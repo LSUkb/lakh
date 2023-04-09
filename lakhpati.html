@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"
+    >
+    <title>Page title</title>
+    <link rel="stylesheet" href="lakhpati.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+<style>
+    *{
+    margin:0;
+    
+}
+.firstsection{
+    background-image:linear-gradient(#8098ff,#242a47);
+    width:100%;
+    height:100vh;
+    text-align:center;
+    z-index:-1;
+    position:absolute;
+    background-size:cover;
+    background-position:center;
+}
+.divimg{
+    height:30vh;
+}
+.divimg img{
+    border-radius:150px;
+    width:150px;
+    height:150px;
+    margin-top:20px;
+    margin-left:20px;
+    float:left;
+    
+}
+.div0 h1{
+    font-size:200px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-weight:bolder;
+    text-shadow:3px 3px white;
+    color:linear-gradient(brown,black) ;   
+}
+#sideNav{
+    z-index:1;        
+    position:fixed;
+    height:100vh;
+    width:50%;
+    left:1000px;
+    transition:0.5s;
+   
+    
+    background-image:linear-gradient(#6a78ff,#282d60);
+    
+}
+.navdiv ul{
+    list-style:none;
+    margin-top:150px;
+}
+.navdiv ul li{
+    margin-top:80px;
+}
+.navdiv ul li a{
+    text-decoration:none;
+    font-size:45px;
+    width:100%;
+    color:black;
+    font-weight:bold;
+    
+} 
+#menuBtn{
+    z-index:2;
+    left:840px;
+    position:fixed;
+    margin-top:40px;
+} 
+#close{
+    width:80px;
+    height:80px;
+    z-index:4;
+    position:fixed;
+    top:50px;
+    left:1000px;
+    
+}    
+#menu{
+    z-index:3;
+    position:fixed;
+}
+@media 
+
+</style>
+</head>
+<body>
+    <section class="firstsection">
+        <div class="divimg"><img src="logo.png" alt=""></div>
+        <div class="div0">
+            <h1>LakhPati Dinghai</h1>
+        </div>
+    </section>
+    <div class="navdiv" id="sideNav">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Register</a></li>
+            <li><a href="">Raffle Rules</a></li>
+            <li><a href="">About Us</a></li>
+        </ul>
+    </div>
+    <div class="div1" id="menuBtn" onclick="myFunction()">
+        <img src="menu.png" alt="" id="menu">
+        <img src="close.png" alt=""
+        id="close">
+    </div>
+    <script src="lakhpati.js">
+        function myFunction(){
+    if(document.getElementById("sideNav").style.left=="1000px"){document.getElementById("sideNav").style.left="500px";
+  document.getElementById("menu").style.left="1000px";
+    document.getElementById("close").style.left="845px";}else{document.getElementById("sideNav").style.left="1000px";
+    document.getElementById("menu").style.left="845px";
+    document.getElementById("close").style.left="1000px";}
+   
+}
+
+    </script>
+</body>
+</html>
